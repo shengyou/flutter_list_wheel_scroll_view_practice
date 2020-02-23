@@ -28,18 +28,19 @@ class ListWheelScrollViewApp extends StatelessWidget {
 class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final _style = Theme.of(context).textTheme.display2;
     return Scaffold(
       appBar: new AppBar(
         title: new Text('List Wheel Scroll View'),
       ),
       body: new Center(
         child: new ListWheelScrollView.useDelegate(
-          itemExtent: _style.fontSize,
+          itemExtent: 200,
           childDelegate: ListWheelChildLoopingListDelegate(
             children: List<Widget>.generate(
               20,
-              (index) => Text('${index + 1}', style: _style),
+              (index) => Image(
+                image: NetworkImage('https://flutter.github.io/assets-for-api-docs/assets/widgets/owl.jpg'),
+              ),
             ),
           ),
         ),
