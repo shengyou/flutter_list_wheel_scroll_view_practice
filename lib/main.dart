@@ -39,7 +39,7 @@ class HomePage extends StatelessWidget {
             children: List<Widget>.generate(
               20,
               (index) => Image(
-                image: NetworkImage('https://flutter.github.io/assets-for-api-docs/assets/widgets/owl.jpg'),
+                image: NetworkImage('https://fakeimg.pl/200x100/?retina=1&text=$index'),
               ),
             ),
           ),
