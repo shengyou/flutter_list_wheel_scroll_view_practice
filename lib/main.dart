@@ -34,12 +34,14 @@ class HomePage extends StatelessWidget {
       ),
       body: new Center(
         child: new ListWheelScrollView.useDelegate(
-          itemExtent: 200,
+          itemExtent: 150,
           childDelegate: ListWheelChildLoopingListDelegate(
             children: List<Widget>.generate(
               20,
               (index) => Image(
-                image: NetworkImage('https://fakeimg.pl/200x100/?retina=1&text=$index'),
+                image: NetworkImage('https://fakeimg.pl/300x150/?retina=1&text=$index'),
+                width: 300,
+                height: 150,
               ),
             ),
           ),
